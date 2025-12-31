@@ -6,7 +6,5 @@ export default defineConfig({
   base: '/mi-sitio-personal',
   output: 'static',
   compressHTML: true,
-  build: {
-    inlineStylesheets: 'auto',
-  },
+  inlineStylesheets: 'auto',
 });
