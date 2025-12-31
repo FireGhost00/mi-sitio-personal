@@ -1,0 +1,299 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<Layout title="FireGhost00 - Desarrollador Web" description="Sitio personal de FireGhost00: desarrollador web apasionado por crear experiencias digitales rápidas y eficientes.">
+  <Hero 
+    title="Hola, soy FireGhost00" 
+    subtitle="Desarrollador web apasionado por crear experiencias digitales rápidas, eficientes y centradas en el usuario."
+  />
+  
+  <Section title="Sobre Mí" id="about">
+    <div class="about-content">
+      <p>
+        Soy un desarrollador web con pasión por las tecnologías modernas y las mejores prácticas de desarrollo.
+        Me especializo en crear sitios web estáticos, rápidos y optimizados para SEO utilizando frameworks modernos.
+      </p>
+      <p>
+        Mi enfoque está en construir aplicaciones web que sean no solo visualmente atractivas, sino también
+        performantes, accesibles y fáciles de mantener. Creo firmemente en el poder de la web estática y
+        la generación de sitios estáticos (SSG) para ofrecer la mejor experiencia posible a los usuarios.
+      </p>
+      <div class="skills">
+        <h3>Habilidades Técnicas</h3>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h4>Frontend</h4>
+            <ul>
+              <li>HTML5, CSS3, JavaScript (ES6+)</li>
+              <li>TypeScript</li>
+              <li>Astro, React, Vue</li>
+              <li>Responsive Design</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h4>Herramientas</h4>
+            <ul>
+              <li>Git & GitHub</li>
+              <li>npm/pnpm</li>
+              <li>VS Code</li>
+              <li>Chrome DevTools</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h4>Conceptos</h4>
+            <ul>
+              <li>SEO & Accesibilidad</li>
+              <li>Performance Optimization</li>
+              <li>Static Site Generation</li>
+              <li>Clean Code</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+  
+  <Section title="Proyectos" id="projects">
+    <div class="projects-grid">
+      <ProjectCard
+        title="Mi Sitio Personal"
+        description="Este es un sitio web personal construido con Astro. Un proyecto que demuestra mis habilidades en desarrollo web moderno, optimización de rendimiento y mejores prácticas de SEO."
+        technologies={["Astro", "TypeScript", "CSS"]}
+        link="https://github.com/FireGhost00/mi-sitio-personal"
+      />
+      
+      <ProjectCard
+        title="Portafolio de Proyectos"
+        description="Colección de proyectos personales y experimentales donde exploro nuevas tecnologías y patrones de diseño."
+        technologies={["JavaScript", "HTML", "CSS"]}
+      />
+      
+      <ProjectCard
+        title="Blog Técnico"
+        description="Próximamente: Un blog donde compartiré mi viaje de aprendizaje, tutoriales y reflexiones sobre desarrollo web."
+        technologies={["Astro", "Markdown", "MDX"]}
+      />
+    </div>
+  </Section>
+  
+  <Section title="Mi Viaje Técnico" id="journey">
+    <div class="journey-content">
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Inicio en el Desarrollo Web</h3>
+            <p>
+              Comencé mi viaje en el desarrollo web aprendiendo los fundamentos: HTML, CSS y JavaScript.
+              Desde el principio, me fascinó la capacidad de crear experiencias interactivas y accesibles
+              para millones de personas.
+            </p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Frameworks Modernos</h3>
+            <p>
+              Descubrí el ecosistema de frameworks modernos como React, Vue y especialmente Astro.
+              Me enamoré del enfoque "Islands Architecture" y la filosofía de enviar menos JavaScript
+              al navegador.
+            </p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Optimización y Performance</h3>
+            <p>
+              Aprendí la importancia crítica del rendimiento web y el SEO. Ahora me enfoco en crear
+              sitios que no solo se vean bien, sino que también carguen rápidamente y estén optimizados
+              para los motores de búsqueda.
+            </p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Presente y Futuro</h3>
+            <p>
+              Continúo aprendiendo y experimentando con nuevas tecnologías. Mi objetivo es crear
+              experiencias web excepcionales que sean rápidas, accesibles y agradables de usar.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+  
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 FireGhost00. Construido con ⚡ Astro.</p>
+      <div class="footer-links">
+        <a href="https://github.com/FireGhost00" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+</Layout>
+
+<style>
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .skills {
+    margin-top: 3rem;
+  }
+  
+  .skills h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .skill-category {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+  
+  .skill-category h4 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+  
+  .skill-category ul {
+    list-style: none;
+  }
+  
+  .skill-category li {
+    padding: 0.5rem 0;
+    color: var(--text-light);
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .skill-category li:last-child {
+    border-bottom: none;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .journey-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--accent);
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+  .timeline-marker {
+    position: absolute;
+    left: -2.5rem;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid var(--bg);
+    box-shadow: 0 0 0 3px var(--accent);
+  }
+  
+  .timeline-content {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+  
+  .timeline-content h3 {
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline-content p {
+    margin-bottom: 0;
+  }
+  
+  .footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer p {
+    margin-bottom: 1rem;
+    color: var(--text-light);
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .footer-links a {
+    font-weight: 600;
+  }
+  
+  @media (max-width: 768px) {
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .timeline {
+      padding-left: 1.5rem;
+    }
+    
+    .timeline-marker {
+      left: -2rem;
+    }
+  }
+</style>

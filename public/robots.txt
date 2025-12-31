@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fireghost00.github.io/mi-sitio-personal/sitemap-index.xml
